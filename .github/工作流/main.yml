@@ -20,11 +20,11 @@ jobs:
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
       # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run:python -c "import sys; print(sys.version)"
       - name: Set timezone
         run: |
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-      - name: Display Python version
-        run:python -c "import sys; print(sys.version)"
       - name: weixin
         run: |
           python3 main.py
